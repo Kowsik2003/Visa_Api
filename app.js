@@ -97,8 +97,8 @@ const checkTokenStatus = async (req,res) => {
 		    headers: {
 		      'Content-Type' : 'application/json',
 		      'Accept' : 'application/json',
-		      'keyId' : '43545213-06fa-46e6-9952-b2475a7642f0',
-		      'Authorization' : 'Basic MEJHN1NDNlRDMlgxN0lGNVhTSlcyMWphSlJvUG1lNkJ2ZTNxTXJ5MnF5cUlaRUFqQTp3T3hRNlMyaU84c2pYOWNEWEQ=' 
+		      'keyId' : `${process.env.KEY_ID}`,
+		      'Authorization' : `Basic ${process.env.BASE64}`  
 		    },
 		   data : encData,
 		    httpsAgent : new https.Agent({
